@@ -1,8 +1,8 @@
+import Experience from './Experience'
 const Experiences = () => {
   return (
-    <section className='slide'>
-
-      <h2>Experiencias</h2>
+    <section className='slide container-experiencia'>
+      <Experience />
     </section>
   )
 }
