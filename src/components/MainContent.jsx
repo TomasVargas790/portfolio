@@ -6,6 +6,7 @@ export default function MainContent () {
         <p>FullStack Developer, studing my Degree in Informatic Engineering.<br /> I'm currently working in a consultory named BDT Global </p>
       </div>
       <img src='/portrait.png' alt='' />
+
     </main>
   )
 }

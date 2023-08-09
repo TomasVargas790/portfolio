@@ -1,9 +1,19 @@
+import Study from './Study'
 const Studies = () => {
   return (
-    <section className='slide'>
-
-      <h2>Studies</h2>
-    </section>
+    <>
+      <h1>Estudios</h1>
+      <section className='slide container-experiencia'>
+        <Study />
+        <Study />
+        <Study />
+        <Study />
+        <Study />
+        <Study />
+        <Study />
+        <Study />
+      </section>
+    </>
   )
 }
 

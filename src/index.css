@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
+:root {
+  color-scheme: light;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +15,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   font-family: 'Cascadia Code', sans-serif;
-  background-color: #171c28;
   color: white;
 }
 
@@ -25,25 +28,24 @@ body #root {
 
 
 .main-container {
-  margin-top: 3em;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .slide {
   margin-top: 2em;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 .main-container img {
-  max-width: 500px;
-  border: 3px solid rgb(203, 87, 230);
+  max-width: 20em;
+  border: .2em solid rgb(255, 255, 255);
   border-radius: 2em;
-  box-shadow: 1em 1em 10em rgb(203, 87, 230);
-  background-color: rgb(224, 99, 214);
+  box-shadow: 0em 0em 5em rgb(255, 255, 255);
+  background-color: rgb(224, 99, 214, .3);
 }
 
 .main-text {
@@ -56,14 +58,24 @@ body #root {
 }
 
 .box {
-  border: 4px solid rgb(57, 80, 179);
   padding: 1em;
   border-radius: 1em;
   max-width: 40vw;
+  transition: .4s;
+}
+
+.box:hover {
+  opacity: .8;
 }
 
 .box-experiencia {
+  border: 4px solid rgb(57, 80, 179);
   box-shadow: 0 0 3em rgb(57, 80, 179);
+}
+
+.box-estudios {
+  border: 4px solid rgb(107, 153, 167);
+  box-shadow: 0 0 3em rgb(107, 153, 167);
 }
 
 .container-experiencia {
@@ -75,4 +87,58 @@ body #root {
 
 .box:nth-child(2n+1) {
   margin-top: 8em;
+}
+
+.upper {
+  position: fixed;
+  bottom: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 7em;
+  filter: invert(1) opacity(.7);
+  transition: .2s;
+}
+
+.upper img {
+  width: 100%;
+  height: 100%;
+}
+
+.upper:hover {
+  opacity: .5;
+}
+
+/* .mouse-follower {
+  width: 50;
+  height: 50;
+  pointer-events: none;
+  left: -25;
+  top: -25;
+  position: 'absolute';
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+} */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  }
+
+  .box {
+    color: rgb(255, 255, 255)
+  }
+
+  .box-experiencia {
+
+    border: 4px solid rgb(107, 153, 167);
+    box-shadow: 0 0 3em rgb(107, 153, 167);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171c28;
+  }
 }
