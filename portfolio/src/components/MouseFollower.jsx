@@ -5,9 +5,9 @@ export default function MouseFollower () {
   useEffect(() => {
     const handleMove = (event) => {
       const { pageX, pageY } = event
-      const element = document.elementFromPoint(pageX, pageY)
-      const { backgroundColor } = window.getComputedStyle(element)
-      setPosition({ x: pageX, y: pageY, color: backgroundColor })
+      // const element = document.elementFromPoint(pageX, pageY)
+      // const { backgroundColor } = window.getComputedStyle(element)
+      setPosition({ x: pageX, y: pageY/* , color: backgroundColor  */ })
     }
 
     window.addEventListener('pointermove', handleMove)
