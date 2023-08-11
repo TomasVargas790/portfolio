@@ -1,69 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
   min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Cascadia Code', sans-serif;
+  color: white;
+  cursor: none;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body #root {
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.slide {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.gap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.main-container img {
+  max-width: 20em;
+  border: .2em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-shadow: 0em 0em 5em rgb(255, 255, 255);
+  background-color: rgb(224, 99, 214, .3);
+}
+
+.main-text {
+  max-width: 50%;
+  margin-top: 10em;
+}
+
+.main-text p {
+  font-size: x-large;
+}
+
+.box {
+  padding: 1em;
+  border-radius: 1em;
+  max-width: 40vw;
+  transition: .4s;
+}
+
+.box:hover {
+  opacity: .8;
+}
+
+.box-experiencia {
+  border: 4px solid rgb(57, 80, 179);
+  box-shadow: 0 0 3em rgb(57, 80, 179);
+}
+
+.box-estudios {
+  border: 4px solid rgb(107, 153, 167);
+  box-shadow: 0 0 3em rgb(107, 153, 167);
+}
+
+.container-experiencia {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.box:nth-child(2n+1) {
+  margin-top: 8em;
+}
+
+.upper {
+  position: fixed;
+  bottom: 10px;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 7em;
+  filter: invert(1) opacity(.8);
+  transition: .2s;
+  z-index: 100;
 }
-button:hover {
-  border-color: #646cff;
+
+.upper img {
+  width: 100%;
+  height: 100%;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.upper:hover {
+  opacity: .5;
+}
+
+/* .mouse-follower {
+  width: 50;
+  height: 50;
+  pointer-events: none;
+  left: -25;
+  top: -25;
+  position: 'absolute';
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+} */
+
+.mouse-follower:hover {
+  cursor: none;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  body {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   }
-  a:hover {
-    color: #747bff;
+
+  .box {
+    color: rgb(255, 255, 255)
   }
-  button {
-    background-color: #f9f9f9;
+
+  .box-experiencia {
+
+    border: 4px solid rgb(107, 153, 167);
+    box-shadow: 0 0 3em rgb(107, 153, 167);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171c28;
   }
 }
