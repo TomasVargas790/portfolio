@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react'
 
 export default function MouseFollower () {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 0, y: 0, color: '#fff' })
   useEffect(() => {
     const handleMove = (event) => {
       const { pageX, pageY } = event
-      setPosition({ x: pageX, y: pageY })
+      const element = document.elementFromPoint(pageX, pageY)
+      const { backgroundColor } = window.getComputedStyle(element)
+      setPosition({ x: pageX, y: pageY, color: backgroundColor })
     }
 
     window.addEventListener('pointermove', handleMove)
 
     return () => { // cleanup method
-      console.log('cleanup')
       window.removeEventListener('pointermove', handleMove)
     }
   }, [])
@@ -21,7 +22,9 @@ export default function MouseFollower () {
         className='mouse-follower' style={{
           position: 'absolute',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          border: '1px solid #fff',
+          boxShadow: `1px 2px 4em${position.color}`,
+          zIndex: '5',
+          border: '2px solid #fff',
           borderRadius: '50%',
           opacity: 0.8,
           pointerEvents: 'none',
