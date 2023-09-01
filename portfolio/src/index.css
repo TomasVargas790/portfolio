@@ -83,7 +83,7 @@ body #root {
   box-shadow: 0 0 3em rgb(107, 153, 167);
 }
 
-.container-experiencia {
+.container {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -170,21 +170,21 @@ body #root {
   background-color: aliceblue;
   border-radius: 2em;
   padding: 2em;
-  color: black
+  color: black;
+  margin: 1.5em;
 }
 
 .container-tech {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 80%;
 }
 
 .tech-img {
   width: 3em;
   height: 3em;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .navbar {
@@ -210,4 +210,14 @@ body #root {
   font-size: xx-large;
   font-family: inherit;
   cursor: pointer;
+}
+
+.study-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.study-title img {
+  object-fit: contain;
 }

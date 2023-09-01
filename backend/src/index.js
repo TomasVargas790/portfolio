@@ -1,7 +1,8 @@
 import express from 'express'
 import 'dotenv/config'
 import experienceRouter from './routes/experience.route.js'
-import studiesRouter from './routes/studies.route.js'
+import studyRouter from './routes/study.route.js'
+import techRouter from './routes/tech.route.js'
 
 const PORT = process.env.PORT
 
@@ -16,7 +17,8 @@ server.use((req, res, next) => {
 })
 
 server.use('/experience', experienceRouter)
-server.use('/study', studiesRouter)
+server.use('/study', studyRouter)
+server.use('/tech', techRouter)
 
 server.listen(PORT, (req, res) => {
   console.log(`oa  ${PORT}`)

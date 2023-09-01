@@ -1,8 +1,7 @@
-import Experiences from './components/Experiences'
 import UpArrow from './components/UpArrow'
 import MainContent from './components/MainContent'
 import MouseFollower from './components/MouseFollower'
-import Studies from './components/Studies'
+import Container from './components/Container'
 import Footer from './components/Footer'
 import TechStack from './components/TechStack'
 import Navbar from './components/Navbar'
@@ -17,8 +16,8 @@ export default function App () {
         {/* <button>Cambiar Modo</button> */}
         <UpArrow />
         <MainContent />
-        <Experiences />
-        <Studies />
+        <Container endpoint='experience' />
+        <Container endpoint='study' />
         <TechStack />
         <MouseFollower />
       </main>
